@@ -1,0 +1,23 @@
+{
+  "name": "discord-robo-albert-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/builders": "^0.6.0",
+    "@discordjs/rest": "^0.1.0-canary.0",
+    "cfb.js": "^4.1.8",
+    "discord-api-types": "^0.22.0",
+    "discord.js": "^13.1.0",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0"
+  }
+}
