@@ -61,10 +61,12 @@ function get_games_string(year, team, games) {
             const is_tie = parseInt(home_points) == parseInt(away_points);
             const is_home_win = parseInt(home_points) > parseInt(away_points);
 
-            print_away_points = (is_home_team ? '' : '**') + away_points + (is_home_team ? '' : '**');
-            print_home_points = (is_home_team ? '**' : '') + home_points + (is_home_team ? '**' : '');
+            print_away_points = (away_points !== null ? (is_home_team ? '' : '**') + away_points + (is_home_team ? '' : '**') : '');
+            print_home_points = (home_points !== null ? (is_home_team ? '**' : '') + home_points + (is_home_team ? '**' : '') : '');
 
-            if(is_tie) {
+            if(home_points === null) {
+              print_result = ''
+            } else if(is_tie) {
                 print_result = '**TIE**';
                 ties++;
             } else if((is_home_team && is_home_win) || (!is_home_team && !is_home_win)) {
