@@ -13,7 +13,8 @@ async function get_game_id(team_name) {
     const response = await fetch(url)
     if(response.ok) {
         const data = await response.json();
-        var game_id = data['team']['nextEvent'][0]['id'];
+        var event_id = data['team']['nextEvent'].length - 1;
+        var game_id = data['team']['nextEvent'][event_id]['id'];
         return game_id;
     } 
 }
