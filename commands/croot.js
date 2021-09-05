@@ -64,12 +64,12 @@ module.exports = {
                 }
 
                 const embed = new MessageEmbed()
-                    .setTitle(fullname)
+                    .setTitle(`${fullname} - ${position} - ${year}`)
+                    .setColor('#FA4616')
                     .setURL(player_url)
                     .setThumbnail(thumnbail_url)
                     .setDescription(bio)
                     .addField('High School', institution)
-                    .addField('Position', position, true)
                     .addField('Height', height, true)
                     .addField('Weight', weight, true)
                     .addField('247 Composite', `${stars_str} (${composite_rating})`);
