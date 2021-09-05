@@ -1,6 +1,7 @@
 const fs = require('fs');
 const { Client, Collection, Intents } = require('discord.js');
 const { token } = require('./config.json');
+const institutions = require('./util/institutions');
 
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 
@@ -30,5 +31,8 @@ client.on('interactionCreate', async interaction => {
 		console.error(error);
 	}
 });
+
+institutions.init(function(institutions) {
+})
 
 client.login(token);
