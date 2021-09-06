@@ -80,7 +80,7 @@ function get_games_string(year, team, games) {
             console.log(error);
         }
 
-        message += `Week ${game['week']}${ home_points === null ? '' : ':' } ${print_result} ${is_home_team ? 'vs.' : '@'} ${print_team}: ${print_away_points} ${ home_points === null ? '' : '-' } ${print_home_points}\n`;
+        message += `Week ${game['week']}${ home_points === null ? '' : ': ' }${print_result} ${is_home_team ? 'vs.' : '@'}${print_team}: ${print_away_points}${ home_points === null ? '' : ' - ' }${print_home_points}\n`;
     }
 
     return [message, wins, losses, ties];
